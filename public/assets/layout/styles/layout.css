@@ -48,7 +48,7 @@ a {text-decoration: none;}
 --------------------------------------------------------------------------------------------------------------- */
 #header{}
 
-#header #logo{margin:22px 0 0 0;}
+#header #logo{margin:12px 0 0 0;}
 #header #logo h1{margin:0; padding:0; font-size:2.2rem;}
 
 
@@ -338,10 +338,16 @@ input:focus, textarea:focus, *:required:focus{border-color:#df4343 !important;}
 .row0{color:#FFFFFF; background-color:#161C21;}
 .row1{
 	position: fixed;
+	color: white;
 	top: 0;	
 	left: 0;
+	width: 100%;
+	height: 80px;
 	z-index: 1000;
-	color:#FFFFFF; background-color:transparent;
+	background-color: rgba(255, 255, 255, 0.027);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	padding: 10px 0;
 }
 .row2{color:#474747; background-color:#F4F4F4;}
 .row3{color:#474747; background-color:#FFFFFF;}

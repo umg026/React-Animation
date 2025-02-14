@@ -1,39 +1,21 @@
-import React, { useEffect } from 'react';
+import AnimatedCursor from "react-animated-cursor"
 import './App.css';
+import Sliders from "./components/Slider";
 
 function App() {
-  useEffect(() => {
-    const cursor = document.querySelector('.cursor');
-
-    const moveCursor = (e) => {
-      if (cursor) {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
-      }
-    };
-
-    const clickEffect = () => {
-      if (cursor) {
-        cursor.style.backgroundColor = '#00ff88';
-        setTimeout(() => {
-          cursor.style.backgroundColor = 'transparent';
-        }, 300);
-      }
-    };
-
-    document.addEventListener('mousemove', moveCursor);
-    document.addEventListener('click', clickEffect);
-
-    return () => {
-      document.removeEventListener('mousemove', moveCursor);
-      document.removeEventListener('click', clickEffect);
-    };
-  }, []);
-
+  
   return (
     <div>
-      {/* Cursor Element */}
-      <div className="cursor"></div>
+      <AnimatedCursor 
+      color="255, 255, 255"
+      innerSize={10}
+      outerSize={30}
+      outerScale={1.5} 
+      outerAlpha={1}
+      outerStyle={{
+        border: "1px solid rgba(255, 255, 255, 1)",
+      }}
+      />
 
       <div className="bgded">
         <div className="wrapper row1">
@@ -57,7 +39,8 @@ function App() {
           </header>
         </div>
         <div className="overlay">
-          <div id="demo" className="carousel slide" data-bs-ride="carousel">
+          <Sliders />
+          {/* <div id="demo" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-indicators">
               <button type="button" data-bs-target="#demo" data-bs-slide-to="0" className="active"></button>
               <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
@@ -74,7 +57,7 @@ function App() {
                 <img src="/assets/images/demo3.jpg" alt="New York" className="d-block" style={{ width: '100%' }} />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <a id="backtotop" href="#top"><i className="fas fa-chevron-up" /></a>
