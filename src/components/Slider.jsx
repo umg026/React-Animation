@@ -2,8 +2,8 @@ import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
 const slides = [
-    { title: 'First item', description: 'Lorem ipsum', path:"/assets/images/demo1.jpg"},
-    { title: 'Second item', description: 'Lorem ipsum',path:"/assets/images/demo2.jpg" },
+    { title: 'First item', description: 'Lorem ipsum', path:"/assets/images/pose-001.webp"},
+    { title: 'Second item', description: 'Lorem ipsum',path:"/assets/images/pose-002.webp" },
     { title: 'Second item', description: 'Lorem ipsum',path:"/assets/images/demo3.jpg" }
 
   ];
@@ -20,7 +20,7 @@ export default function Sliders() {
                 <h2>{slide.title}</h2>
                 <div>{slide.description}</div>
 
-                <img src={slide.path} alt={slide.title} className="d-block" style={{ width: '100%' }} />
+                <img src={slide.path} alt={slide.title} className="d-block" style={{ width: '100%',height:"100vh" }} />
             </div>)}
         </Slider>
   )
