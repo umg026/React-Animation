@@ -1,4 +1,5 @@
 import React from 'react'
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Navbar() {
   return (
@@ -10,7 +11,7 @@ export default function Navbar() {
             </h1>
             {/* Mobile Menu Button */}
             <button className="navbar-toggler mobile-menu bg-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-              <span className="navbar-toggler-icon" />
+            <RxHamburgerMenu color='white' size={25}/>
             </button>
             {/* Desktop Menu */}
             <div className="collapse navbar-collapse desktop-nav">

@@ -2,13 +2,15 @@
     height: 100vh !important;
 }
 
-.slider .previousButton{
+.slider .previousButton {
     display: none !important;
 }
-.slider .nextButton{
+
+.slider .nextButton {
     display: none !important;
 }
-.offcanvas  {
+
+.offcanvas {
     z-index: 1200;
 }
 
@@ -17,12 +19,15 @@
     background-color: rgba(255, 255, 255, 0.1);
     z-index: 1101;
 }
-.nextButton  {
+
+.nextButton {
     display: none;
 }
+
 .previousButton {
     display: none;
 }
+
 .home-layer {
     position: absolute;
     top: 0;
@@ -37,12 +42,14 @@
     height: 80px;
     font-family: poppins;
 }
+
 .logo-title {
     font-size: 30px;
 }
 
 .offcanvas {
-    background-color: #222; /* Dark background for mobile menu */
+    background-color: #222;
+    /* Dark background for mobile menu */
     color: white;
 }
 
@@ -51,16 +58,21 @@
 }
 
 .offcanvas a:hover {
-    color: #f04e30; /* Change hover color */
+    color: #f04e30;
+    /* Change hover color */
 }
 
-@media (max-width: 991px) { /* Only show offcanvas toggle on mobile */
+@media (max-width: 991px) {
+
+    /* Only show offcanvas toggle on mobile */
     .desktop-nav {
         display: none;
     }
 }
 
-@media (min-width: 992px) { /* Hide offcanvas button on desktop */
+@media (min-width: 992px) {
+
+    /* Hide offcanvas button on desktop */
     .mobile-menu {
         display: none;
     }
@@ -68,22 +80,40 @@
 
 @media (max-width:680px) {
     .navbar .container {
-     padding: 10px;
+        padding: 10px;
     }
+
     .fixed-bottom {
         display: none !important;
     }
+
+    .home-layer {
+        height: 111vh !important;
+    }
+    .words-wrapper .words span{
+        top: 7px !important;
+    }
+    .circle-text {
+        width: 200px !important;
+    }
+
+    .words-wrapper {
+        font-size: 30px !important;
+    }
+
     .content-layers {
         padding: 0 58px !important;
     }
 }
-.content-layers{
+
+.content-layers {
     position: inherit;
     bottom: 80px;
     width: 100%;
     max-width: 700px;
     padding: 0 100px;
 }
+
 .content-layers p {
     margin-top: 30px;
     font-family: poppins;
@@ -95,13 +125,13 @@
     font-weight: bold;
     color: #fff;
     text-align: left;
-  }
-  
-  .words-wrapper .css {
+}
+
+.words-wrapper .css {
     color: red;
-  }
-  
-  .words-wrapper .words {
+}
+
+.words-wrapper .words {
     margin-left: 10px;
     display: inline-block;
     position: relative;
@@ -114,9 +144,9 @@
     background: var(--color-bg, #ffc703);
     box-sizing: content-box;
     transition: all 0.7s;
-  }
-  
-  .words-wrapper .words span {
+}
+
+.words-wrapper .words span {
     position: absolute;
     top: 0px;
     font-family: "UnifrakturMaguntia", serif;
@@ -124,38 +154,58 @@
     opacity: 0;
     transform: translate(-50%, -100%);
     transition: transform 0.7s, opacity 0.25s 0.25s;
-  }
-  
-  .words-wrapper .words span.current {
+}
+
+.words-wrapper .words span.current {
     opacity: 1;
     transform: translate(-50%, 0);
-  }
-  
-  .words-wrapper .words span.next {
+}
+
+.words-wrapper .words span.next {
     transform: translate(-50%, 100%);
-  }
-  
-  @media (max-width: 700px) {
+}
+
+@media (max-width: 700px) {
     .words-wrapper .words {
-      width: var(--width-mobile) !important;
+        width: var(--width-mobile) !important;
+        margin-top: 8px !important;
+        margin-left: 0 !important;
     }
-  }
+    .content-layers p {
+        margin-top: 20px;
+    }
+    .circle-text {
+    margin-bottom: 25px !important;
+    }
+}
+.navbar .mobile-menu {
+    outline: none;
+    background-color: transparent !important;
+}
+.navbar .mobile-menu:focus {
+    outline: none;
+    border: none !important;
+}
+.navbar .mobile-menu .navbar-toggler-icon {
+    color: #fff !important;
+}
 
-
-  /* 360 deg animation */
-  .circle-text {
+/* 360 deg animation */
+.circle-text {
     width: 300px;
     height: 200px;
     font-size: 20px;
     margin-bottom: 50px;
     position: relative;
-    animation: rotate360 5s linear infinite; /* Rotates every 5 seconds */
+    animation: rotate360 5s linear infinite;
+    /* Rotates every 5 seconds */
 }
 
 @keyframes rotate360 {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -169,7 +219,8 @@ svg {
 text {
     font-size: 1.5rem;
     font-weight: bold;
-    fill: white; /* Text color */
+    fill: white;
+    /* Text color */
     text-transform: uppercase;
 }
 
