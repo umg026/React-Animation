@@ -1,27 +1,40 @@
-import Slider from 'react-animated-slider';
-import 'react-animated-slider/build/horizontal.css';
+// Import Swiper components and styles
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
 
+// Import Swiper modules
+import { Autoplay } from "swiper/modules";
+
+// Slide data
 const slides = [
-    { title: 'First item', description: 'Lorem ipsum', path:"/assets/images/pose-001.webp"},
-    { title: 'Second item', description: 'Lorem ipsum',path:"/assets/images/pose-002.webp" },
-    { title: 'Second item', description: 'Lorem ipsum',path:"/assets/images/demo3.jpg" }
-
-  ];
-
+  { title: "First item", description: "Lorem ipsum", path: "/assets/images/pose-001.webp" },
+  { title: "Second item", description: "Lorem ipsum", path: "/assets/images/pose-002.webp" },
+  { title: "Third item", description: "Lorem ipsum", path: "/assets/images/demo3.jpg" },
+];
 
 export default function Sliders() {
   return (
-        <Slider 
-        autoplay={2000}
-        duration={1000}
-        infinite={true}
-        >
-            {slides.map((slide, index) => <div key={index}>
-                <h2>{slide.title}</h2>
-                <div>{slide.description}</div>
-
-                <img src={slide.path} alt={slide.title} className="d-block" style={{ width: '100%',height:"100vh" }} />
-            </div>)}
-        </Slider>
-  )
+    <Swiper
+      modules={[Autoplay]}
+      autoplay={{ delay: 2000, disableOnInteraction: false }}
+      loop={true}
+      spaceBetween={10}
+      slidesPerView={1}
+    >
+      {slides.map((slide, index) => (
+        <SwiperSlide key={index}>
+          <div style={{ textAlign: "center" }}>
+            <h2>{slide.title}</h2>
+            <p>{slide.description}</p>
+            <img
+              src={slide.path}
+              alt={slide.title}
+              style={{ width: "100%", height: "100vh", objectFit: "cover" }}
+            />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
 }

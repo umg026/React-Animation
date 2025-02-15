@@ -317,7 +317,7 @@ hr, .borderedbox{border-color:#D7D7D7;}
 label span{color:#FF0000; background-color:inherit;}
 input:focus, textarea:focus, *:required:focus{border-color:#df4343 !important;}
 
-.overlay{color:#FFFFFF; background-color:black;}
+.overlay{color:#FFFFFF; background-color:black; margin-top: -18px;}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
 .overlay.light{color:#474747;}
 .overlay.light::after{background-color:rgba(255,255,255,.7);}
